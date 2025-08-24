@@ -15,14 +15,12 @@
             {% endif %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
-          </ul>
-          <!-- Theme toggle moved outside of the visible-links list so it can be positioned
-               independently at the far right and have distinct hover behavior. -->
-          <div id="theme-toggle" class="masthead__menu-item persist tail" aria-hidden="false">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-moon" aria-hidden="true" title="toggle theme"></i></a>
-          </div>
-          <ul class="hidden-links hidden"></ul>
         </ul>
+        <!-- Theme toggle moved outside of the visible-links list so it can be positioned
+             independently at the far right and have distinct hover behavior. -->
+        <div id="theme-toggle" class="masthead__menu-item persist tail" aria-hidden="false">
+          <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-moon" aria-hidden="true" title="toggle theme"></i></a>
+        </div>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>

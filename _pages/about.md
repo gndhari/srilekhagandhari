@@ -10,3 +10,4 @@ My doctoral research focuses on theoretical quantum information, with a strong e
 
 You can find the rest of my profile in the Education and Research pages linked in the top menu.
 
+I'm planning to graduate to in Fall 2025 and will be happy to talk about full-time opportunities in quantum information. Please contact me at [gandhari@umd.edu](mailto:gandhari@umd.edu).

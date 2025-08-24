@@ -88,9 +88,11 @@
   // height: 36px;
 
   @include breakpoint($large) {
-    display: block;
-    width: auto;
-    height: auto;
+  /* Keep avatar and content on the same line and vertically centered */
+  display: inline-block;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
   }
 
   img {
@@ -112,10 +114,12 @@
   line-height: 1;
 
   @include breakpoint($large) {
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+  /* Keep content inline with avatar and vertically centered */
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  padding-left: 15px;
+  padding-right: 0;
   }
 }
 
@@ -123,8 +127,9 @@
   margin: 0;
 
   @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  /* remove the extra top margin so the name vertically centers with the avatar */
+  margin-top: 0;
+  margin-bottom: 0;
   }
 }
 .sidebar .author__name {
@@ -173,9 +178,19 @@
   }
 
   @include breakpoint($large) {
-    display: block;
+  display: inline-block;
+  vertical-align: middle;
   }
 
+
+/* Ensure avatar and content align vertically at large viewports using flexbox */
+@include breakpoint($large) {
+  .sidebar [itemscope] {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
   button {
     margin-bottom: 0;
 

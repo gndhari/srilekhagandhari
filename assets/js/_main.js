@@ -16,7 +16,9 @@ let determineComputedTheme = () => {
   if (themeSetting != "system") {
     return themeSetting;
   }
-  return (userPref && userPref("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  // Use window.matchMedia to detect OS preference. "userPref" was undefined and
+  // caused a runtime error which prevented theme code from running.
+  return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
 };
 
 // detect OS/browser preference
