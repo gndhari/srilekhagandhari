@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srilekha Gandhari - Personal Website</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; background: #f7f9fc; margin: 0; }
+    .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 32px; }
+    h1 { text-align: center; color: #2a3a5e; }
+    nav { display: flex; justify-content: center; margin-bottom: 32px; }
+    nav button { background: #2a3a5e; color: #fff; border: none; padding: 12px 32px; margin: 0 8px; border-radius: 4px; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
+    nav button.active, nav button:hover { background: #1a2540; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    ul { padding-left: 20px; }
+    @media (max-width: 600px) {
+      .container { padding: 12px; }
+      nav button { padding: 8px 12px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Srilekha Gandhari</h1>
+    <nav>
+      <button class="active" onclick="showTab('about')">About Me</button>
+      <button onclick="showTab('education')">Education</button>
+      <button onclick="showTab('research')">Research</button>
+      <button onclick="showTab('contact')">Contact Me</button>
+    </nav>
+    <div id="about" class="tab-content active">
+      <h2>About Me</h2>
+      <p>My doctoral research focuses on theoretical quantum information, with a strong emphasis on quantum characterization, validation, and verification (QCVV). I'm working on developing robust methods for analyzing and benchmarking quantum systems that challenge current roadblocks like correlated noise, as well as quantum tomography techniques to accurately characterize quantum states and processes. My broader interests include exploring quantum advantage, and scalability of quantum computers.</p>
+    </div>
+    <div id="education" class="tab-content">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>PhD in Physics</strong>, University of Maryland, College Park, MD (2019–present)</li>
+        <li><strong>B.Tech (Honors) in Engineering Physics</strong>, Indian Institute of Technology Madras, Chennai, India (2015–2019)</li>
+      </ul>
+      <h3>Mentoring and Teaching</h3>
+      <p>(Add mentoring and teaching details here if available)</p>
+    </div>
+    <div id="research" class="tab-content">
+      <h2>Research Experience</h2>
+      <ul>
+        <li><strong>Graduate Research Assistant</strong>, University of Maryland, College Park, MD (Aug 2020–present)<br>
+          <em>PI: Michael Gullans</em>
+          <ul>
+            <li>Quantum state tomography: Devised classical shadow techniques for continuous-variable (CV) quantum systems, establishing rigorous precision bounds. Verified analytical results with extensive numerical simulations.</li>
+            <li>Effects of non-Markovian noise: Analyzed effects of non-Markovianity on randomized benchmarking. Working on understanding more general non-Markovian interactions, guided by spin-Boson systems and process tensor formalism, to efficiently characterize noise.</li>
+          </ul>
+        </li>
+        <li><strong>Applications Intern</strong>, Atom Computing, CA (May–July 2023)<br>
+          <em>PI: Jeffrey Epstein</em>
+          <ul>
+            <li>Quantum noise characterization: Studied 2-qubit gates on a neutral atom quantum computing platform and developed a noise estimation theory using compressive Gate Set Tomography.</li>
+            <li>Constructed an optimal recovery circuit for a subsystem error-correcting code using elementary gates native to their platform.</li>
+          </ul>
+        </li>
+        <li><strong>Research Intern</strong>, Laboratoire Kastler Brossel, Paris, France (May–July 2018)<br>
+          <em>PI: Nicolas Treps</em>
+        </li>
+      </ul>
+      <h3>Publications</h3>
+      <p>(Add publications here)</p>
+      <h3>Talks</h3>
+      <p>(Add talks here)</p>
+    </div>
+    <div id="contact" class="tab-content">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out for collaborations or questions!</p>
+      <p>Email: <a href="mailto:gandhari@umd.edu">gandhari@umd.edu</a></p>
+    </div>
+  </div>
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(function(tab) {
+        tab.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+      document.querySelectorAll('nav button').forEach(function(btn, idx) {
+        btn.classList.remove('active');
+        if (btn.textContent.replace(/\s/g, '').toLowerCase().includes(tabId.replace(/\s/g, '').toLowerCase())) {
+          btn.classList.add('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

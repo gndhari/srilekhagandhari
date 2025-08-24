@@ -1,0 +1,212 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.    `   
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.78]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+\usepackage{multicol}
+%\setlength{\columnsep}{1cm}
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Srilekha} % Your first name
+\familyname{Gandhari} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{University of Maryland}{College Park, MD 20742}
+%\mobile{+1 2404138109}
+\email{srilekhag98@gmail.com}
+\email{gandhari@umd.edu}
+\homepage{scholar.google.com/citations?hl=en\&user=xg7GZVIAAAAJ} {Google Scholar} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+% \extrainfo{additional information}
+% \photo[70pt][0pt]{pictures/umd_logo} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+My doctoral research focuses on theoretical quantum information, with a strong emphasis on quantum characterization, validation, and verification (QCVV). I'm working on developing robust methods for analyzing and benchmarking quantum systems that challenge current roadblocks like correlated noise, as well as quantum tomography techniques to accurately characterize quantum states and processes. My broader interests include exploring quantum advantage, and scalability of quantum computers.
+\\
+\\
+% \textit{Technical skills: Python, Julia, Mathematica, PyGSTi, Git, Adobe Illustrator, Linux, C} 
+
+% \section{Research Interests}
+% \cventry{}{--}{}{}{}{}
+% \cventry{}{--}{}{}{}{}
+
+% \vspace{-6mm}
+\section{Education}
+
+\cventry{2019--\textit{present}}{\textbf{PhD} in Physics}{University of Maryland, College Park, MD}{}{}{}
+\cventry{2015--2019}{\textbf{B.Tech (Honors)} in Engineering Physics}{Indian Institute of Technology Madras, Chennai, India}{}{}{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Research Experience}
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cventry{August 2020-\textit{present}}{\textbf{Graduate Research Assistant}}{PI: Michael Gullans}{University of Maryland, College Park, MD}{}
+{ \textbf{Quantum state tomography} 
+\begin{itemize}
+    \item Devised classical shadow techniques for continuous-variable (CV) quantum systems, establishing rigorous precision bounds
+    \item Developed a succinct framework to compare sampling complexity of different measurement bases 
+    \item Verified analytical results with extensive numerical simulations
+\end{itemize}
+\textbf{Effects of non-Markovian noise}
+\begin{itemize}
+    \item Analyzed effects of non-Markovianity on randomized benchmarking
+    \item Examined the case of qubit systems in Bosonic environments, developed an efficient algorithm to study them under non-Markovian noise, and observed non-exponential decay of fidelity with depth 
+    \item Working on understanding more general non-Markovian interactions, guided by spin-Boson systems and process tensor formalism, to efficiently characterize noise 
+\end{itemize}
+}
+
+\cventry{May--July 2023}{\textbf{Applications Intern at Atom Computing, CA}}{PI: Jeffrey Epstein}{}{}{ Topic: Quantum noise characterization
+\begin{itemize}
+    \item Studied 2-qubit gates on a neutral atom quantum computing platform and developed a noise estimation theory using compressive Gate Set Tomography
+    \item Simulated its efficiency using various metrics and obtained confidence intervals
+    \item Constructed an optimal recovery circuit for a subsystem error-correcting code using elementary gates native to their platform 
+\end{itemize}}
+
+
+
+\cventry{May--July 2018}{\textbf{Research Intern at Laboratoire Kastler Brossel, Paris, France}}{PI: Nicolas Treps}{}{}{
+Topic: Entanglement properties of Gaussian states of light 
+\begin{itemize}
+    \item Studied photon-subtracted and photon-added Gaussian states of light, useful for continuous-variable quantum computation 
+    \item Proved that a class of symplectic transformations can always be found to make a single photon-subtracted/added Gaussian state separable, extended the result to multi-photon added/subtracted states
+\end{itemize}
+}
+
+
+\cventry{December '15 -- May '17}{\textbf{IIT Madras Student Satellite Project }}{IIT Madras}{Chennai}{}{
+\begin{itemize}
+    \item Part of the payload team for a scintillator for detecting particle bursts in the low earth orbit, worked on finding a suitable way of distinguishing and measuring the energy of protons, electrons and muons using a single detector
+    \item Calibrated the detector with proton beams at Bhabha Atomic Research Centre (BARC), Mumbai, India
+\end{itemize}
+}
+
+\cventry{Aug '18-- April '19}{\textbf{Undergraduate Project}}{PI: Vaibhav Madhok}{IIT Madras, India}{}
+{Used Stochastic/It\^{o} calculus to understand the quantum trajectory description of open quantum systems and simulated the damped Rabi flopping of a two-level atom using Quantum Monte Carlo wavefunction algorithm}
+
+
+\cventry{May--July 2017}{\textbf{Summer Research Fellowship, Indian Academy of Science}}{PI: Shubhrangshu Dasgupta}{IIT Ropar, India}{}{
+Light propagation through periodic stratified media -- proved that the transparency band of such a structure can be completely controlled by tuning the susceptibility of just one of the media.}
+
+\cventry{2023-2025}{\textbf{Peer Review }}{}{}{}{\vspace{-20pt}
+Journals: Quantum, npj Quantum Information
+\\Conferences: TQC, QCTIP}
+
+
+
+%-------------------
+
+
+\section{Publications \& preprints}
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+\cvlistitem{\textbf{S. Gandhari}, M. J. Gullans. Quantum non-Markovian noise in randomized benchmarking of spin-boson models.~ ~\href{https://arxiv.org/abs/2502.14702}{\textit{arXiv:2502.14702}}}
+\cvlistitem{K.A. Pawlak, J. M. Epstein, D. Crow, \textbf{S. Gandhari}, M. Li, T. C. Bohdanowicz, J. King. Quantum Subspace Correction for Constraints.~\href{https://arxiv.org/abs/2310.20191}{\textit{arXiv:2310.20191}}}
+\cvlistitem{\textbf{S. Gandhari}, V. V. Albert, T. Gerrits, J. M. Taylor, M.J. Gullans. Precision Bounds on Continuous-Variable State Tomography using Classical Shadows.~\href{https://journals.aps.org/prxquantum/abstract/10.1103/PRXQuantum.5.010346}{\textit{PRX Quantum 5, 010346 (2024)}}}
+
+
+
+
+%------------------------
+
+\section{Talks}
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+\cvlistitem{\textbf{S. Gandhari}, M.J. Gullans. Quantum non-Markovian noise effects in randomized benchmarking. Talk at: APS Global Physics Summit. 2025 March 16-21; \textit{Annaheim, CA}}
+\cvlistitem{\textbf{S. Gandhari}, M.J. Gullans. Quantum non-Markovian noise effects in randomized benchmarking. Talk at: APS March Meeting. 2024 March 4-8; \textit{Minneapolis, MN}}
+\cvlistitem{\textbf{S. Gandhari}, V.V. Albert, J.M. Taylor, M.J. Gullans. Multimode and Experimental Continuous Variable Shadow Tomography. Talk at: APS March Meeting. 2023 March 5-10; \textit{Las Vegas, NV}}
+\cvlistitem{\textbf{S. Gandhari}, V.V. Albert, J.M. Taylor, M.J. Gullans. Shadow tomography of continuous-variable quantum systems. Talk at: APS March Meeting. 2022 March 14-18; \textit{Chicago, IL}}
+\cvlistitem{\textbf{S. Gandhari}, V.V. Albert, J.M. Taylor, M.J. Gullans. Shadow tomography of continuous-variable quantum systems. \\Posters presented at: 23rd Annual SQuInT Workshop, 2021; 26th QIP Conference, 2023;  27th QIP Conference, 2024; 3rd APQC Conference, 2024; 28th QIP Conference, 2025}
+
+%--------------------------------------------------
+\section{Technical Skills}
+
+\cvitem{Programming Languages}{Python, C, Mathematica, Git}
+\cvitem{Quantum Computing}{SciPy, PyGSTi, QuTiP, CVXPY}
+\cvitem{Visualization}{Matplotlib, Seaborn, Adobe Illustrator, AutoCAD}
+
+%-------------------------------------------------
+
+% \section{Reviewing}
+% \cvitem{Journals}{Quantum, npj Physics, 2023-2025}
+% \cvitem{Conferences}{QIP, QCTiP}
+
+%-------------------------------------------------
+
+\section{Fellowships \& Awards}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistitem{Dean's Fellowship, Department of Physics, University of Maryland 2019}
+\cvlistitem{Summer Research Fellowship, by Indian Academy of Sciences 2017}
+\cvlistitem{Distinction in National Standard Examination in Physics (NSEP) 2015}
+\cvlistitem{Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship, Government of India 2014}
+
+
+%-------------------------------------------------
+
+\section{Mentoring \& Teaching}
+\cvlistitem{Teaching assistant for introductory physics labs, Mathematical Physics and Classical Dynamics at the University for Maryland, nominated for Best TA award. 2019-2020}
+\cvlistitem{Student mentor guiding freshmen at IIT Madras, 2016-2018}
+\cvlistitem{Class representative for my major at IIT Madras, 2015-2019}
+
+
+
+\section{Graduate Coursework}
+\cventry{Quantum Physics}{Quantum mechanics, Quantum information and quantum computation, Quantum error correction and fault tolerance, Quantum technologies, Quantum field theory}{}{}{}{}
+\cventry{General Physics}{Classical dynamics, Non-equilibrium statistical mechanics, Condensed matter physics}{}{}{}{}
+%\cventry{\textit{Technical Skills}}{Python, Mathematica, PyGSTi, Git, Adobe Illustrator, Linux, C}{}{}{}{}
+%--------------------------------------------------
+
+\end{document}
+
+
+

@@ -31,11 +31,13 @@ let setTheme = (theme) => {
     browserPref;
 
   if (use_theme === "dark") {
-    $("html").attr("data-theme", "dark");
-    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
+  $("html").attr("data-theme", "dark");
+  // show sun icon in dark mode (user requested icons swapped)
+  $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
   } else if (use_theme === "light") {
-    $("html").removeAttr("data-theme");
-    $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
+  $("html").removeAttr("data-theme");
+  // show moon icon in light mode
+  $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
   }
 };
 
@@ -137,6 +139,25 @@ $(document).ready(function () {
   $("a").smoothScroll({
     offset: -scssMastheadHeight,
     preventDefault: false,
+  });
+
+  /* Open links in new tabs by default, but exclude in-page anchors and interactive controls
+     such as the theme toggle (role=button). This keeps navigation behavior consistent. */
+  $("a").each(function () {
+    var href = $(this).attr('href');
+
+    // Skip links without href, same-page anchors, or javascript pseudo-links
+    if (!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+
+    // Skip controls that are meant to act as buttons
+    if ($(this).attr('role') === 'button') return;
+
+    // Set target and rel for safety
+    $(this).attr('target', '_blank');
+    // add noopener noreferrer for security
+    if (!$(this).attr('rel')) {
+      $(this).attr('rel', 'noopener noreferrer');
+    }
   });
 
 });
