@@ -53,6 +53,12 @@
 
 /* Theme toggle (moved outside the visible-links list) */
 #theme-toggle {
+  /* ensure the wrapper doesn't show the masthead background */
+  background: transparent !important;
+  display: inline-flex;
+  padding: 0;
+  border-radius: 0;
+
   position: absolute;
   right: 0.5rem;
   top: 50%;
@@ -88,6 +94,24 @@
   /* prevent underline animation from applying */
   a:before { display: none !important; }
 }
+
+/* Extra forceful overrides in case other rules apply (keeps the toggle icon-only) */
+#site-nav #theme-toggle,
+#site-nav #theme-toggle a,
+#site-nav #theme-toggle i {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 
 
 /*
